@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Live Location"
+        android:id="@+id/nav_liveLocation"
+        android:icon="@drawable/ic_livelocation" />
+    <item
+        android:title="My Location"
+        android:id="@+id/na_myLocation"
+        android:icon="@drawable/ic_mylocation" />
+    <item
+        android:title="Behaviour"
+        android:id="@+id/nav_start"
+        android:icon="@drawable/ic_stats" />
+    <item
+        android:title="History"
+        android:id="@+id/nav_history"
+        android:icon="@drawable/history" />
+
+    <item android:title="@string/nav_profile"
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/account" />
+
+</menu>
