@@ -7,22 +7,22 @@
     android:orientation="vertical"
     tools:context=".Login">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="154dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="161dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="415dp"
-        android:src="@drawable/logoone"
-        app:tint="#03A9F4"
-        tools:ignore="ImageContrastCheck">
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="154dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginStart="156dp"-->
+<!--        android:layout_marginTop="161dp"-->
+<!--        android:layout_marginEnd="140dp"-->
+<!--        android:layout_marginBottom="415dp"-->
+<!--        android:src="@drawable/logoone"-->
+<!--        app:tint="#03A9F4"-->
+<!--        tools:ignore="ImageContrastCheck">-->
 
-    </ImageView>
+<!--    </ImageView>-->
 
     <TextView
         android:layout_width="match_parent"
@@ -44,19 +44,13 @@
         android:textSize="24dp"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="366dp"
+    <Button
+        android:id="@+id/google_signup"
+        android:layout_width="306dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="467dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="216dp"
-        android:background="#03A9F4"
-        android:text="Signup">
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="287dp" />
 
-    </androidx.appcompat.widget.AppCompatButton>
 </RelativeLayout>

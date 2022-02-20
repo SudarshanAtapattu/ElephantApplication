@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "88955478694",
+    "firebase_url": "https://elephant-tracker-2839f-default-rtdb.firebaseio.com",
+    "project_id": "elephant-tracker-2839f",
+    "storage_bucket": "elephant-tracker-2839f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88955478694:android:1f6b645af321813f758a67",
+        "android_client_info": {
+          "package_name": "com.newapp.elephantapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88955478694-c4mmj447sjr3bj39gj5t07j7qdor3esa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6Vx-yZZ3zw3f-INTKtcT9k8b0Qb41U2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88955478694-c4mmj447sjr3bj39gj5t07j7qdor3esa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

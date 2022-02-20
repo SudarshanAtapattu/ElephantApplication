@@ -8,35 +8,34 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="164dp"
-        android:layout_height="181dp"
+        android:layout_width="135dp"
+        android:layout_height="146dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="245dp"
-        android:layout_marginEnd="118dp"
-        android:layout_marginBottom="305dp"
-        android:src="@drawable/logoone"
-        app:tint="#03A9F4">
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="40dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/iconelephant">
 
     </ImageView>
 
     <TextView
+        android:id="@+id/txt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="430dp"
+        android:layout_marginTop="290dp"
         android:gravity="center"
         android:text="Elephant Tracker"
         android:textSize="24dp"
-        android:textStyle="bold">
-    </TextView>
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="318dp"
         android:gravity="center"
         android:text="Version 1.0"
         android:textSize="20dp"
