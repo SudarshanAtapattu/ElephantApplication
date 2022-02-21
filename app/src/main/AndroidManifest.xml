@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ElephantApplication">
         <activity
-            android:name=".LiveLocationActivity"
+            android:name=".MyLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Menue"
             android:exported="false" />
         <activity
             android:name=".Login"
@@ -26,7 +29,7 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".Menue"
+            android:name=".LiveLocationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
