@@ -39,7 +39,8 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/ic_livelocation"/>
+                    android:src="@drawable/ic_livelocation"
+                    app:tint="#A01111" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -59,6 +60,7 @@
                     android:layout_marginBottom="0dp"
                     android:padding="5dp"
                     android:background="#ffffff"
+                    android:textSize="10dp"
                     android:text="Live location of elephant"/>
 
 
@@ -82,7 +84,8 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/ic_mylocation"/>
+                    android:src="@drawable/ic_mylocation"
+                    app:tint="#1E18CB" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -99,10 +102,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
                     android:padding="5dp"
-                    android:text="sample123f ogod"/>
-
+                    android:background="#ffffff"
+                    android:textSize="10dp"
+                    android:text="Live location of elephant"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -133,7 +137,8 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/ic_stats"/>
+                    android:src="@drawable/ic_stats"
+                    app:tint="#4CE222" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -150,9 +155,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
                     android:padding="5dp"
-                    android:text="sample123f ogod"/>
+                    android:background="#ffffff"
+                    android:textSize="10dp"
+                    android:text="Live location of elephant"/>
 
 
             </LinearLayout>
@@ -173,7 +180,8 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/history"/>
+                    android:src="@drawable/history"
+                    app:tint="#673AB7" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -190,9 +198,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
                     android:padding="5dp"
-                    android:text="sample123f ogod"/>
+                    android:background="#ffffff"
+                    android:textSize="10dp"
+                    android:text="Live location of elephant"/>
 
 
             </LinearLayout>
@@ -222,7 +232,8 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/account"/>
+                    android:src="@drawable/account"
+                    app:tint="#E4C810" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -239,9 +250,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
                     android:padding="5dp"
-                    android:text="sample123f ogod"/>
+                    android:background="#ffffff"
+                    android:textSize="10dp"
+                    android:text="Live location of elephant"/>
 
 
             </LinearLayout>
