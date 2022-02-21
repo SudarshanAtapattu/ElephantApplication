@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,50 +7,41 @@
     android:orientation="vertical"
     tools:context=".Login">
 
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="154dp"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginStart="156dp"-->
-<!--        android:layout_marginTop="161dp"-->
-<!--        android:layout_marginEnd="140dp"-->
-<!--        android:layout_marginBottom="415dp"-->
-<!--        android:src="@drawable/logoone"-->
-<!--        app:tint="#03A9F4"-->
-<!--        tools:ignore="ImageContrastCheck">-->
 
-<!--    </ImageView>-->
+
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Elephant Tracker"
-        android:textStyle="bold"
-        android:layout_marginTop="300dp"
-        android:gravity="center"
-        android:textSize="24dp">
-    </TextView>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:letterSpacing="0.02"
+        android:text="@string/select_google_account"
+        android:textColor="#7995fd"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
-        android:gravity="center"
-        android:text="Choose google account and Signup"
-        android:textColor="#969191"
-        android:textSize="24dp"/>
-
+        android:layout_height="217dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ele_logo"
+        android:contentDescription="TODO" />
 
     <Button
         android:id="@+id/google_signup"
-        android:layout_width="306dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="287dp" />
-
-</RelativeLayout>
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="60dp"
+        android:background="#ffff"
+        android:letterSpacing="0.02"
+        android:text="get started now"
+        android:textColor="#F8F8F8"
+        android:textSize="16dp"
+        app:backgroundTint="#7995fd"
+        tools:ignore="TextContrastCheck" />
+</LinearLayout>
