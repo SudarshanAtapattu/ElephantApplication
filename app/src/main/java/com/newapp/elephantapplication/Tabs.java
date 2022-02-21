@@ -15,6 +15,9 @@ import android.widget.FrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
+/**
+ * The type Tabs.
+ */
 public class Tabs extends AppCompatActivity {
 
     // initialize variable
@@ -35,7 +38,6 @@ public class Tabs extends AppCompatActivity {
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.main_nav);
         frameLayout = (FrameLayout) findViewById(R.id.main_frame);
-
         liveLocationFragment = new LiveLocationFragment();
         myLocationFragment = new MyLocationFragment();
         statFragment = new StatFragment();

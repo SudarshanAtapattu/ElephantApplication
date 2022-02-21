@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ElephantApplication">
         <activity
+            android:name=".StatAndBehavioursActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyLocationActivity"
             android:exported="false" />
         <activity
