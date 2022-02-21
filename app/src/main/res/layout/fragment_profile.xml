@@ -11,29 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="265dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="5dp"
         app:cardBackgroundColor="@color/teal_700"
         android:layout_marginEnd="2dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="148dp"
-            android:layout_height="148dp"
-            android:layout_marginLeft="130dp"
-            android:layout_marginTop="50dp"
-            app:cardCornerRadius="56dp">
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:text="jhonedo@gmail.com"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:textSize="25dp"
-            android:layout_marginLeft="87dp"
-            android:layout_marginTop="220dp">
-        </TextView>
+        <ImageView
+            android:layout_width="62dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/logout"
+            app:tint="#FEFFFF" />
 
     </androidx.cardview.widget.CardView>
 
@@ -73,6 +61,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/profile_name"
             android:layout_width="203dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -120,6 +109,7 @@
 
 
         <TextView
+            android:id="@+id/profile_tele"
             android:layout_width="203dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -159,6 +149,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/profile_email"
             android:layout_width="203dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -197,6 +188,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/profile_location"
             android:layout_width="203dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
