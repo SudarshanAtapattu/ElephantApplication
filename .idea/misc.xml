@@ -8,12 +8,13 @@
         <entry key="app/src/main/res/drawable/ic_mylocation.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/drawable/ic_stats.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/layout/activity_history.xml" value="0.2949074074074074" />
-        <entry key="app/src/main/res/layout/activity_live_location_acivity.xml" value="0.2949074074074074" />
+        <entry key="app/src/main/res/layout/activity_live_location_acivity.xml" value="0.2747603833865815" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.34479166666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.15885416666666666" />
         <entry key="app/src/main/res/layout/activity_menue.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_my_location.xml" value="0.2949074074074074" />
-        <entry key="app/src/main/res/layout/activity_my_profile.xml" value="0.2949074074074074" />
+        <entry key="app/src/main/res/layout/activity_my_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_stat_and_behaviours.xml" value="0.2949074074074074" />
         <entry key="app/src/main/res/layout/activity_tabs.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_history.xml" value="0.3453125" />
@@ -21,6 +22,7 @@
         <entry key="app/src/main/res/layout/fragment_my_location.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.3453125" />
         <entry key="app/src/main/res/layout/fragment_stat.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/item.xml" value="0.33177083333333335" />
         <entry key="app/src/main/res/menu/nav_items.xml" value="0.3453125" />
       </map>
     </option>

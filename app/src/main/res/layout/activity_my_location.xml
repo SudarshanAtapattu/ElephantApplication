@@ -5,17 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="3dp"
     tools:context=".MyLocationActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="10dp"
+        android:text="My Location"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="265dp"
+        android:layout_height="224dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="2dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="225dp"
             android:background="@drawable/maptwo"
             android:contentDescription="TODO"
             android:elevation="4dp"
@@ -24,210 +35,266 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="0dp"
+        android:clipToPadding="false"
         android:gravity="center"
-        android:text="Activity"
-        android:textSize="15dp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
 
-    <androidx.cardview.widget.CardView
+        <LinearLayout
+
+            android:layout_width="338dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="338dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="62dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/elephant"
+                        app:tint="#2196F3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="Elephant ID"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="EL000001"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="2dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="62dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/elephant" />
+        <LinearLayout
+            android:layout_width="338dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="0dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="22dp"
-            android:gravity="center"
-            android:text="Elephant ID"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="0dp"
-            android:gravity="start"
-            android:text="EL0E0001"
-            android:textColor="#397BDF"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="338dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="8dp">
 
-        <TextView
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="40dp"
-            android:gravity="start"
-            android:text="Today @  12:10 P.M"
-            android:textColor="#B4B4B4"
-            android:textSize="11dp"
-            android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="62dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/user"
+                        app:tint="#2196F3" />
 
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="Location"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="Wilachchiya"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="2dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="62dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/user" />
+        <LinearLayout
+            android:layout_width="338dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="0dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="22dp"
-            android:gravity="center"
-            android:text="Location"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="0dp"
-            android:gravity="start"
-            android:text="Wilachchiya"
-            android:textColor="#397BDF"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="338dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="8dp">
 
-        <TextView
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="40dp"
-            android:gravity="start"
-            android:text="Today @  12:10 P.M"
-            android:textColor="#B4B4B4"
-            android:textSize="11dp"
-            android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="62dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/distance"
+                        app:tint="#2196F3" />
 
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="Distance"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="2KM"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="2dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="62dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/distance" />
+        <LinearLayout
+            android:layout_width="338dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="0dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="22dp"
-            android:gravity="center"
-            android:text="Distance"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="0dp"
-            android:gravity="start"
-            android:text="2,75 Km"
-            android:textColor="#397BDF"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="338dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="8dp">
 
-        <TextView
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="40dp"
-            android:gravity="start"
-            android:text="Today @  12:10 P.M"
-            android:textColor="#B4B4B4"
-            android:textSize="11dp"
-            android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="62dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/coordinates"
+                        app:tint="#2196F3" />
 
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="coordinates"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="0dp"
-        app:cardCornerRadius="8dp">
-
-        <ImageView
-            android:layout_width="62dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/coordinates" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="22dp"
-            android:gravity="center"
-            android:text="Co-ordinates"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="161dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="165dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="8.4708° N, 80.2098° E"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
 
-        <TextView
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="9dp"
-            android:gravity="start"
-            android:text="8.4708° N, 80.2098° E"
-            android:textColor="#397BDF"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="40dp"
-            android:gravity="start"
-            android:text="Today @  12:10 P.M"
-            android:textColor="#B4B4B4"
-            android:textSize="11dp"
-            android:textStyle="bold" />
 
-    </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

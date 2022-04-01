@@ -72,16 +72,16 @@
             android:textStyle="bold" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="45dp"-->
-<!--            android:layout_marginTop="35dp"-->
-<!--            android:gravity="start"-->
-<!--            android:text="Today @  12:10 P.M"-->
-<!--            android:textColor="#B4B4B4"-->
-<!--            android:textSize="11dp"-->
-<!--            android:textStyle="bold" />-->
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="45dp"-->
+        <!--            android:layout_marginTop="35dp"-->
+        <!--            android:gravity="start"-->
+        <!--            android:text="Today @  12:10 P.M"-->
+        <!--            android:textColor="#B4B4B4"-->
+        <!--            android:textSize="11dp"-->
+        <!--            android:textStyle="bold" />-->
 
 
         <TextView
@@ -196,6 +196,8 @@
             android:text="7"
             android:textSize="24dp"
             android:textStyle="bold" />
+
+
 
 
         <!--        <TextView-->

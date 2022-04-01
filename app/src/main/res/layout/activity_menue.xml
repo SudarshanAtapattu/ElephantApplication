@@ -25,6 +25,64 @@
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/MyProfile"
+            android:layout_width="338dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/account"
+                    app:tint="#E4C810" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="My Profile"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#F6F4F5"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:id="@+id/menu_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp"
+                    android:background="#ffffff"
+                    android:textSize="10dp"
+                    android:text="Jhone Doe"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/LiveLocation"
             android:layout_width="160dp"
             android:layout_height="165dp"
             android:layout_margin="10dp"
@@ -61,7 +119,7 @@
                     android:padding="5dp"
                     android:background="#ffffff"
                     android:textSize="10dp"
-                    android:text="Live location of elephant"/>
+                    android:text="Live location of user"/>
 
 
 
@@ -70,6 +128,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/MyLocation"
             android:layout_width="160dp"
             android:layout_height="165dp"
             android:layout_margin="10dp"
@@ -106,7 +165,7 @@
                     android:padding="5dp"
                     android:background="#ffffff"
                     android:textSize="10dp"
-                    android:text="Live location of elephant"/>
+                    android:text="My location "/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -114,7 +173,6 @@
 
 
     </LinearLayout>
-
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"
@@ -123,6 +181,7 @@
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/statAndBehaviour"
             android:layout_width="160dp"
             android:layout_height="165dp"
             android:layout_margin="10dp"
@@ -159,13 +218,14 @@
                     android:padding="5dp"
                     android:background="#ffffff"
                     android:textSize="10dp"
-                    android:text="Live location of elephant"/>
+                    android:text="Stat and Behaviours of elephant"/>
 
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/history"
             android:layout_width="160dp"
             android:layout_height="165dp"
             android:layout_margin="10dp"
@@ -202,7 +262,7 @@
                     android:padding="5dp"
                     android:background="#ffffff"
                     android:textSize="10dp"
-                    android:text="Live location of elephant"/>
+                    android:text="Location History of elephant"/>
 
 
             </LinearLayout>
@@ -210,59 +270,5 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="338dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:src="@drawable/account"
-                    app:tint="#E4C810" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:text="My Profile"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:background="#F6F4F5"
-                    android:layout_margin="10dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="0dp"
-                    android:padding="5dp"
-                    android:background="#ffffff"
-                    android:textSize="10dp"
-                    android:text="Live location of elephant"/>
-
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-
-
-
-    </LinearLayout>
 </LinearLayout>

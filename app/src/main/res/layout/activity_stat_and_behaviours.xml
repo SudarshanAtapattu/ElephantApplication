@@ -5,24 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="5dp"
+    android:padding="5dp"
     tools:context=".StatAndBehavioursActivity">
 
     <TextView
-        android:layout_width="193dp"
-        android:layout_height="51dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="213dp"
-        android:gravity="center"
-        android:text="Avoid invaders in village  "
-        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="10dp"
+        android:text="Status and Behaviours"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="365dp"
+        android:layout_width="wrap_content"
+        android:layout_height="335dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="2dp">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -38,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="2dp"
         app:cardCornerRadius="4dp">
 
@@ -100,7 +101,7 @@
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="490dp"
+        android:layout_marginTop="470dp"
         android:layout_marginEnd="2dp"
         app:cardCornerRadius="4dp">
 
@@ -134,18 +135,6 @@
             android:textStyle="bold" />
 
 
-        <!--        <TextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginLeft="45dp"-->
-        <!--            android:layout_marginTop="35dp"-->
-        <!--            android:gravity="start"-->
-        <!--            android:text="Today @  12:10 P.M"-->
-        <!--            android:textColor="#B4B4B4"-->
-        <!--            android:textSize="11dp"-->
-        <!--            android:textStyle="bold" />-->
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -161,11 +150,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="63dp"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="540dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="118dp"
         app:cardCornerRadius="4dp">
 
 
@@ -196,18 +183,6 @@
             android:text="7"
             android:textSize="24dp"
             android:textStyle="bold" />
-
-
-        <!--        <TextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginLeft="45dp"-->
-        <!--            android:layout_marginTop="35dp"-->
-        <!--            android:gravity="start"-->
-        <!--            android:text="Today @  12:10 P.M"-->
-        <!--            android:textColor="#B4B4B4"-->
-        <!--            android:textSize="11dp"-->
-        <!--            android:textStyle="bold" />-->
 
 
         <TextView

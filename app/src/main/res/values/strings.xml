@@ -9,6 +9,8 @@
     <string name="nav_profile">Profile</string>
     <string name="my_default_web_client_id" translatable="false">88955478694-c4mmj447sjr3bj39gj5t07j7qdor3esa.apps.googleusercontent.com</string>
     <string name="select_google_account">Select Google Account</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
+    <string name="google_naps_key" templateMergeStrategys="preserve" translatables = "false">AIzaSyB096j8Wr0Mr7E3YHciJaa5HdCeObz8PAs</string>
 
-</resources>
+    </resources>

@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
-            Intent intent = new Intent(getApplicationContext(), Tabs.class);
+            Intent intent = new Intent(getApplicationContext(), Menue.class);
             startActivity(intent);
         }
     }
@@ -51,6 +51,11 @@ public class Login extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         createRequest();
+
+
+
+
+
     }
 
     private void createRequest() {
@@ -106,15 +111,13 @@ public class Login extends AppCompatActivity {
                              Sign in success,update UI with the signed - in user's information
                              */
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent intent = new Intent(getApplicationContext(), Tabs.class);
+                            Intent intent = new Intent(getApplicationContext(), Menue.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(Login.this, "Google sign in  failed", Toast.LENGTH_SHORT).show();
-
                         }
                     }
                 });
     }
-
 
 }

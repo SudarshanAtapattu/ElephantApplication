@@ -5,13 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="3dp"
     tools:context=".HistoryFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="10dp"
+        android:text="History"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="410dp"
+        android:layout_height="383dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="2dp"
@@ -20,7 +29,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="410dp"
+            android:layout_height="383dp"
             android:background="@drawable/mapthree"
             android:contentDescription="TODO"
             android:elevation="4dp"
@@ -28,120 +37,225 @@
             tools:targetApi="lollipop" />
 
     </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="2dp"
-        app:cardCornerRadius="4dp">
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="338dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
 
 
-        <ImageView
-            android:layout_width="52dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="280dp"
-            android:src="@drawable/calendar" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="338dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="From"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="62dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/calendar"
+                        app:tint="#2196F3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="To"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="Today 12 : 15"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="165dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Today, 12:15"
-            android:textSize="15dp"
-            android:textStyle="bold" />
 
-    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="2dp"
-        app:cardCornerRadius="4dp">
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:layout_width="338dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
 
 
-        <ImageView
-            android:layout_width="52dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="280dp"
-            android:src="@drawable/calendar" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="338dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="To"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="62dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/calendar"
+                        app:tint="#2196F3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="From"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="Today 04 : 15"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="165dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Today, 12:15"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-    </androidx.cardview.widget.CardView>
 
 
-    <androidx.cardview.widget.CardView
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="2dp"
-        app:cardCornerRadius="4dp">
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:layout_width="338dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
 
 
-        <ImageView
-            android:layout_width="52dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="280dp"
-            android:src="@drawable/baseline_gradient" />
-        <ImageView
-            android:layout_width="52dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="200dp"
-            android:src="@drawable/baseline_auto_graph" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="338dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Show information"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="62dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/search"
+                        app:tint="#2196F3" />
 
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="22dp"
+                        android:gravity="center"
+                        android:text="Select Date"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
-    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Search"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
 </LinearLayout>

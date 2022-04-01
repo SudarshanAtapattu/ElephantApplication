@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvFullName" type="id" />
+    <item name="tvLastName" type="id" />
+    <item name="tvAge" type="id" />
+    <item name="long_tv" type="id" />
+    <item name="lat_tv" type="id" />
+    <item name="date_tv" type="id" />
+    <item name="vilage_tv" type="id" />
+    <item name="Idelephant_tv" type="id" />
+</resources>
