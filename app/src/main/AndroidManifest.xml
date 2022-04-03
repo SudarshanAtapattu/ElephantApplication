@@ -46,7 +46,7 @@
             android:name=".MyLocationActivity"
             android:exported="false" />
         <activity
-            android:name=".LiveLocationActivity"
+            android:name=".MapsActivity"
             android:exported="false" />
         <activity
             android:name=".Menue"
@@ -58,7 +58,7 @@
             android:name=".Login"
             android:exported="true" />
         <activity
-            android:name=".MapsActivity"
+            android:name=".LiveLocationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

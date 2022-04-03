@@ -24,7 +24,7 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="2dp">
 
-        <ImageView
+        <fragment
             android:layout_width="match_parent"
             android:layout_height="225dp"
             android:background="@drawable/maptwo"

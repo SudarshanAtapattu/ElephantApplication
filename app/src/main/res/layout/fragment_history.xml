@@ -27,13 +27,10 @@
         app:cardCornerRadius="8dp">
 
 
-        <ImageView
+        <fragment
             android:layout_width="match_parent"
             android:layout_height="383dp"
-            android:background="@drawable/mapthree"
-            android:contentDescription="TODO"
-            android:elevation="4dp"
-            tools:ignore="ImageContrastCheck"
+            android:name="com.google.android.gms.maps.MapFragment"
             tools:targetApi="lollipop" />
 
     </androidx.cardview.widget.CardView>

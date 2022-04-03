@@ -3,7 +3,7 @@ package com.newapp.elephantapplication;
 public class Data_Model {
 
 
-    String Age,FullName,LastName;
+
 
     String IdElephant,Daily_Log_Date;
 
@@ -50,42 +50,6 @@ public class Data_Model {
     }
 
 
-
-
-
-
-
-    //----------------------------------------------------------------------
-    public Data_Model(String age, String fullName, String lastName) {
-        Age = age;
-        FullName = fullName;
-        LastName = lastName;
-    }
-
-
-    public String getAge() {
-        return Age;
-    }
-
-    public String getFullName() {
-        return FullName;
-    }
-    public String getLastName() {
-        return LastName;
-    }
-
-
-    public void setAge(String age) {
-        Age = age;
-    }
-
-    public void setFullName(String fullName) {
-        FullName = fullName;
-    }
-
-    public void setLastName(String lastName) {
-        LastName = lastName;
-    }
 
     public  Data_Model (){
 
