@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,7 +33,7 @@
             android:value="AIzaSyB096j8Wr0Mr7E3YHciJaa5HdCeObz8PAs" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".LiveLocationActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
@@ -43,13 +46,13 @@
             android:name=".StatAndBehavioursActivity"
             android:exported="false" />
         <activity
-            android:name=".MyLocationActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MapsActivity"
             android:exported="false" />
         <activity
-            android:name=".Menue"
+            android:name=".MyLocationActivity"
             android:exported="false" />
         <activity
             android:name=".Tabs"
@@ -58,7 +61,7 @@
             android:name=".Login"
             android:exported="true" />
         <activity
-            android:name=".LiveLocationActivity"
+            android:name=".Menue"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

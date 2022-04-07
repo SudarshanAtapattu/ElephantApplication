@@ -13,6 +13,7 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
+        multiDexEnabled = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -58,6 +59,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-dynamic-module-support:16.0.0-beta01'
 
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation "com.google.android.gms:play-services-location:15.0.1"
+    implementation("androidx.multidex:multidex:2.0.1")
+
+    implementation 'com.google.maps.android:android-maps-utils:0.4+'
 
 
 
