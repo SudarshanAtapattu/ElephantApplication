@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="65dp"
     android:padding="10dp"
+    android:layout_marginTop="6dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="4dp">
 
@@ -10,21 +11,22 @@
                 android:layout_width="52dp"
                 android:layout_height="25dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/elephant" />
+                android:src="@drawable/elephant"
+                />
 
             <TextView
                 android:id="@+id/Idelephant_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="ELE0001"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/vilage_tv"
+                android:id="@+id/date_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="165dp"
@@ -35,13 +37,13 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/date_tv"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="45dp"
                 android:layout_marginTop="35dp"
                 android:gravity="start"
-                android:text="Today @  12:10 P.M"
+                android:text=""
                 android:textColor="#B4B4B4"
                 android:textSize="11dp"
                 android:textStyle="bold" />
@@ -62,55 +64,12 @@
         android:id="@+id/long_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="205dp"
+        android:layout_marginLeft="215dp"
         android:layout_marginTop="35dp"
         android:gravity="start"
         android:text="80.2098°"
         android:textColor="#B4B4B4"
         android:textSize="11dp"
         android:textStyle="bold" />
-
-    
-
-
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:gravity="center_vertical">-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvFullName"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="8dp"-->
-<!--            android:text="First name"-->
-<!--            android:textStyle="bold">-->
-
-<!--        </TextView>-->
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvLastName"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="8dp"-->
-<!--            android:text="First name">-->
-
-<!--        </TextView>-->
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvAge"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="8dp"-->
-<!--            android:text="First name">-->
-
-<!--        </TextView>-->
-<!--    </LinearLayout>-->
-
 
 </androidx.cardview.widget.CardView>

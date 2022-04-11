@@ -7,10 +7,10 @@ public class Data_Model {
 
     String IdElephant,Daily_Log_Date;
 
-    long f_latitude,f_longitude;
+    Double f_latitude,f_longitude;
 
 
-    public Data_Model(String idElephant, String daily_Log_Date, long f_latitude, long f_longitude) {
+    public Data_Model(String idElephant, String daily_Log_Date, Double f_latitude, Double f_longitude) {
         IdElephant = idElephant;
         Daily_Log_Date = daily_Log_Date;
         this.f_latitude = f_latitude;
@@ -25,11 +25,11 @@ public class Data_Model {
         return Daily_Log_Date;
     }
 
-    public long getF_latitude() {
+    public Double getF_latitude() {
         return f_latitude;
     }
 
-    public long getF_longitude() {
+    public Double getF_longitude() {
         return f_longitude;
     }
 
@@ -41,11 +41,11 @@ public class Data_Model {
         Daily_Log_Date = daily_Log_Date;
     }
 
-    public void setF_latitude(long f_latitude) {
+    public void setF_latitude(Double f_latitude) {
         this.f_latitude = f_latitude;
     }
 
-    public void setF_longitude(long f_longitude) {
+    public void setF_longitude(Double f_longitude) {
         this.f_longitude = f_longitude;
     }
 

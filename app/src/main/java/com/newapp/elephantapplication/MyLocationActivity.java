@@ -16,6 +16,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.internal.ConnectionCallbacks;
@@ -52,6 +53,7 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
     ArrayList<Data_Model> list;
     private GoogleMap mMap;
     Double distance;
+    TextView Location;
 
     LatLng location, latLng;
 
@@ -65,6 +67,10 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
         fetchLastLocation();
         list = new ArrayList<>();
         data_adapter = new Data_Adapter(this, list);
+
+
+        Location = findViewById(R.id.tvLocation);
+
 
 
         runtimePermission();
@@ -111,8 +117,6 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     private void fetchLastLocation() {
@@ -129,6 +133,7 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
                 public void onSuccess(Location location) {
                     if (location != null) {
                         currentLocation = location;
+
                         Toast.makeText(getApplicationContext(), currentLocation.getLatitude() + "" + currentLocation.getLongitude(), Toast.LENGTH_SHORT);
 //                    SupportMapFragment supportMapFragment = (SupportMapFragment)
 //                            getSupportFragmentManager().findFragmentById(R.id.MyLocMap);
@@ -216,6 +221,8 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
             Geocoder geocoder = new Geocoder(MyLocationActivity.this, Locale.getDefault());
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
             String address = addresses.get(0).getAddressLine(0);
+
+            Location.setText(address.toString());
             Toast.makeText(this, "addresses" + address, Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -246,4 +253,5 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
     public void onStatusChanged(String provider, int status, Bundle extras) {
 
     }
+
 }
