@@ -88,7 +88,7 @@ public class MyProfileActivity extends AppCompatActivity {
         callTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    //CallButton();
+                    CallButton();
 
             }
         });
