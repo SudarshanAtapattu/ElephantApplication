@@ -32,7 +32,7 @@
     <Button
         android:id="@+id/google_signup"
         android:layout_width="240dp"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="40dp"
@@ -41,6 +41,6 @@
         android:text="get started now"
         android:textColor="#F8F8F8"
         android:textSize="16dp"
-        app:backgroundTint="#081F76"
+        app:backgroundTint="#5074FD"
         tools:ignore="TextContrastCheck" />
 </LinearLayout>

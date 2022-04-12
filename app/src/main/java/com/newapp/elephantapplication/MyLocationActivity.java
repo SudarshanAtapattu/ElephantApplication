@@ -8,7 +8,9 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.icu.text.DecimalFormat;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -16,6 +18,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,9 +56,13 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
     ArrayList<Data_Model> list;
     private GoogleMap mMap;
     Double distance;
-    TextView Location;
+    Double distanceKm;
+    TextView Location, Distance_tv, distanceM;
 
-    LatLng location, latLng;
+    String address;
+
+
+    LatLng EleLocation, latLng;
 
 
     @Override
@@ -70,7 +77,6 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
 
 
         Location = findViewById(R.id.tvLocation);
-
 
 
         runtimePermission();
@@ -91,6 +97,7 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
 
             }
         });
+
     }
 
     private void runtimePermission() {
@@ -168,26 +175,17 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
 
                     Double f_latitude = snapshot.child("f_latitude").getValue(Double.class);
                     Double f_longitude = snapshot.child("f_longitude").getValue(Double.class);
-                    location = new LatLng(f_latitude, f_longitude);
-                    mMap.addMarker(new MarkerOptions().position(location).title("ELE00001"));
-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
+
+                    EleLocation = new LatLng(f_latitude, f_longitude);
+                    mMap.addMarker(new MarkerOptions().position(EleLocation).title("ELE00001"));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(EleLocation));
                 }
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
                 }
             });
-            try {
-                LatLng sydny = new LatLng(34, 151);
-                LatLng sydnyjh = new LatLng(84, 351);
 
-                distance = SphericalUtil.computeDistanceBetween(sydny, location);
-                Toast.makeText(this, distance / 1000 + "km", Toast.LENGTH_SHORT).show();
-                Log.e("distance", "distance in km  = " + distance / 1000);
-            } catch (Exception e) {
-                //Toast.makeText(this, e + "error", Toast.LENGTH_SHORT).show();
-                e.printStackTrace();
-            }
         } catch (Exception e) {
 
             e.printStackTrace();
@@ -214,6 +212,7 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
 
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onLocationChanged(@NonNull Location location) {
         Toast.makeText(this, "" + location.getLongitude() + "," + location.getLatitude(), Toast.LENGTH_SHORT).show();
@@ -224,6 +223,32 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
 
             Location.setText(address.toString());
             Toast.makeText(this, "addresses" + address, Toast.LENGTH_SHORT).show();
+
+
+            double Lat = location.getLatitude();
+            double Long = location.getLongitude();
+
+            Log.e("lat and Long ", "lat and Long = " + Lat + " " + Long);
+            LatLng myLocation = new LatLng(Lat, Long);
+
+            //m
+            distance = SphericalUtil.computeDistanceBetween(EleLocation, myLocation);
+            //m
+            distanceM = findViewById(R.id.distanceM_tv);
+            distanceM.setText(distance.toString() + "m");
+
+
+            //Km
+            distanceKm = distance / 1000;
+            Toast.makeText(this, distanceKm + "km", Toast.LENGTH_SHORT).show();
+            Log.e("distance", "distance in km  = " + distanceKm);
+
+
+            //Km
+            Distance_tv = findViewById(R.id.distance_tv);
+            Distance_tv.setText(distanceKm.toString() + "Km");
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -253,5 +278,6 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
     public void onStatusChanged(String provider, int status, Bundle extras) {
 
     }
+
 
 }

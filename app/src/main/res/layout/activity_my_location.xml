@@ -14,7 +14,7 @@
         android:layout_marginLeft="33dp"
         android:layout_marginTop="10dp"
         android:text="My Location"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
@@ -74,7 +74,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="80dp"
+                            android:layout_marginLeft="60dp"
                             android:layout_marginTop="22dp"
                             android:gravity="center"
                             android:text="Elephant ID"
@@ -84,7 +84,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="200dp"
+                            android:layout_marginLeft="130dp"
                             android:layout_marginTop="22dp"
                             android:gravity="center"
                             android:text="EL000001"
@@ -139,7 +139,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="80dp"
+                            android:layout_marginLeft="60dp"
                             android:layout_marginTop="22dp"
                             android:gravity="center"
                             android:text="Location"
@@ -150,7 +150,7 @@
                             android:id="@+id/tvLocation"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="150dp"
+                            android:layout_marginLeft="130dp"
                             android:layout_marginTop="22dp"
                             android:gravity="center"
                             android:text=""
@@ -204,7 +204,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="80dp"
+                            android:layout_marginLeft="60dp"
                             android:layout_marginTop="22dp"
                             android:gravity="center"
                             android:text="Distance"
@@ -212,14 +212,27 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/distance_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="200dp"
-                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="130dp"
+                            android:layout_marginTop="15dp"
                             android:gravity="center"
                             android:text="2KM"
                             android:textSize="15dp"
-                            android:textStyle="bold" />
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/distanceM_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="130dp"
+                            android:layout_marginTop="40dp"
+                            android:gravity="center"
+                            android:text="2KM"
+                            android:textSize="10dp"
+                            android:textStyle="normal" />
+
 
 
                     </androidx.cardview.widget.CardView>

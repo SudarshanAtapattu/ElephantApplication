@@ -50,7 +50,8 @@
                         android:layout_marginTop="11dp"
                         android:layout_marginLeft="-340dp"
                         android:src="@drawable/logout"
-                        app:tint="#2196F3" />
+                        app:tint="#2196F3"
+                        android:contentDescription="TODO" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -168,7 +169,7 @@
                             android:gravity="center"
                             android:text="Jone doe"
                             android:textSize="15dp"
-                            android:textStyle="bold" />
+                            android:textStyle="normal" />
 
 
 
@@ -239,7 +240,7 @@
                         android:gravity="center"
                         android:text="+9711524485"
                         android:textSize="15dp"
-                        android:textStyle="bold" />
+                        android:textStyle="normal" />
 
 
 
@@ -293,24 +294,26 @@
                         app:tint="#2196F3" />
 
                     <TextView
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="80dp"
                         android:layout_marginTop="22dp"
                         android:gravity="center"
-                        android:text="Living In"
+                        android:text="Now In"
                         android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/NowIn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
+                        android:layout_marginLeft="130dp"
                         android:layout_marginTop="22dp"
                         android:gravity="center"
-                        android:text="Anuradapura"
+                        android:text="135545435"
                         android:textSize="15dp"
-                        android:textStyle="bold" />
+                        android:textStyle="normal" />
 
 
 
@@ -356,10 +359,11 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="2dp"
-                    app:cardCornerRadius="8dp"
-                    android:textColor="#F80707"
-                    android:text="Emergency call "
-                    android:textColorHint="#F80606">
+                    android:background="#F4F1F1"
+                    android:text="Emergency call Wild Life Authority "
+                    android:textColor="#D50000"
+                    android:textColorHint="#F80606"
+                    app:cardCornerRadius="8dp">
 
                 </androidx.appcompat.widget.AppCompatButton>
 
