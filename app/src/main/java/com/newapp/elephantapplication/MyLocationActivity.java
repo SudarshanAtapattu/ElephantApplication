@@ -58,6 +58,7 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
     Double distance;
     Double distanceKm;
     TextView Location, Distance_tv, distanceM;
+    private  static  final  int LOCATION_REQUEST = 500;
 
     String address;
 
@@ -161,11 +162,11 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
 
         try {
             latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-            MarkerOptions markerOptions = new MarkerOptions().position(latLng)
-                    .title("I m here");
+            //MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("I m here");
             googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
-            googleMap.addMarker(markerOptions);
+            //googleMap.addMarker(markerOptions);
+
             //googleMap.setMapType(googleMap.MAP_TYPE_SATELLITE);
             mMap = googleMap;
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Test");
@@ -192,6 +193,14 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
 
         }
 
+
+        mMap = googleMap;
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},LOCATION_REQUEST);
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
 
     }
 
