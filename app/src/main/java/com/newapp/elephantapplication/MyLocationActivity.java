@@ -8,8 +8,12 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.icu.text.DecimalFormat;
 import android.location.Address;
 import android.location.Geocoder;
@@ -29,6 +33,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,6 +46,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.maps.android.SphericalUtil;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -178,7 +185,7 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
                     Double f_longitude = snapshot.child("f_longitude").getValue(Double.class);
 
                     EleLocation = new LatLng(f_latitude, f_longitude);
-                    mMap.addMarker(new MarkerOptions().position(EleLocation).title("ELE00001"));
+                    mMap.addMarker(new MarkerOptions().position(EleLocation).title("ELE00001").icon(bitmapDescriptorFactory(getApplicationContext(),R.drawable.ele_marker)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(EleLocation));
                 }
 
@@ -202,6 +209,14 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
         }
         mMap.setMyLocationEnabled(true);
 
+    }
+    private BitmapDescriptor bitmapDescriptorFactory(Context context , int vectorResId){
+        Drawable vectorDrawable = ContextCompat.getDrawable(context,vectorResId);
+        vectorDrawable.setBounds(0,0,vectorDrawable.getIntrinsicWidth(),vectorDrawable.getIntrinsicHeight());
+        Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(),vectorDrawable.getIntrinsicHeight(),Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        vectorDrawable.draw(canvas);
+        return  BitmapDescriptorFactory.fromBitmap(bitmap);
     }
 
     @Override
@@ -231,7 +246,8 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
             String address = addresses.get(0).getAddressLine(0);
 
             Location.setText(address.toString());
-            Toast.makeText(this, "addresses" + address, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "addresses" + address, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Searching location........." , Toast.LENGTH_SHORT).show();
 
 
             double Lat = location.getLatitude();
@@ -243,19 +259,21 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
             //m
             distance = SphericalUtil.computeDistanceBetween(EleLocation, myLocation);
             //m
+            double roundOffM = Math.round(distance*100)/100.00;
             distanceM = findViewById(R.id.distanceM_tv);
-            distanceM.setText(distance.toString() + "m");
+            distanceM.setText(roundOffM+ "m");
 
 
             //Km
             distanceKm = distance / 1000;
-            Toast.makeText(this, distanceKm + "km", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, distanceKm + "km", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,  "Calculating Distance.........", Toast.LENGTH_SHORT).show();
             Log.e("distance", "distance in km  = " + distanceKm);
 
 
-            //Km
+            double roundOff = Math.round(distanceKm*100)/100.00;
             Distance_tv = findViewById(R.id.distance_tv);
-            Distance_tv.setText(distanceKm.toString() + "Km");
+            Distance_tv.setText(roundOff + "Km");
 
 
         } catch (Exception e) {

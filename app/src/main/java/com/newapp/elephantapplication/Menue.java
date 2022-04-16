@@ -23,7 +23,7 @@ public class Menue extends AppCompatActivity {
         final CardView LiveLocation  = findViewById(R.id.LiveLocation);
         final CardView MyLocation  = findViewById(R.id.MyLocation);
         final CardView statAndBehaviour  = findViewById(R.id.statAndBehaviour);
-        final CardView history  = findViewById(R.id.history);
+        //final CardView history  = findViewById(R.id.history);
         final CardView MyProfile  = findViewById(R.id.MyProfile);
 
         menu_name = findViewById(R.id.menu_profile_name);
@@ -58,14 +58,14 @@ public class Menue extends AppCompatActivity {
 
             }
         });
-        history.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Menue.this, HistoryActivity.class);
-                startActivity(intent);
-
-            }
-        });
+//        history.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Menue.this, HistoryActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
         MyProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

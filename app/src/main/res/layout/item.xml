@@ -64,7 +64,7 @@
         android:id="@+id/long_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="215dp"
+        android:layout_marginLeft="225dp"
         android:layout_marginTop="35dp"
         android:gravity="start"
         android:text="80.2098°"

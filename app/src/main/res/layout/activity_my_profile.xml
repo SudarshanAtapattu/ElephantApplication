@@ -222,6 +222,17 @@
                         android:src="@drawable/phone"
                         app:tint="#2196F3" />
 
+                    <ImageView
+                        android:id="@+id/done"
+                        android:layout_width="62dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/done"
+                        android:elevation="50dp"
+                        android:layout_marginLeft="250dp"
+                        app:tint="#4CAF50" />
+
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -232,13 +243,14 @@
                         android:textSize="15dp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/teleNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginLeft="145dp"
+                        android:layout_marginTop="12dp"
                         android:gravity="center"
-                        android:text="+9711524485"
+                        android:text="0711524485"
                         android:textSize="15dp"
                         android:textStyle="normal" />
 
@@ -309,10 +321,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="130dp"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="24dp"
                         android:gravity="center"
-                        android:text="135545435"
-                        android:textSize="15dp"
+                        android:text="*"
+                        android:textSize="13dp"
                         android:textStyle="normal" />
 
 
@@ -359,11 +371,12 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="2dp"
-                    android:background="#F4F1F1"
-                    android:text="Emergency call Wild Life Authority "
-                    android:textColor="#D50000"
+                    android:background="#FF0202"
+                    android:text="Emergency Dial To Wild Life Authority "
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
                     android:textColorHint="#F80606"
-                    app:cardCornerRadius="8dp">
+                    app:cardCornerRadius="15dp">
 
                 </androidx.appcompat.widget.AppCompatButton>
 

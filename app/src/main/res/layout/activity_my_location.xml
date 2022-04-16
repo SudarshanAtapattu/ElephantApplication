@@ -84,7 +84,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="130dp"
+                            android:layout_marginLeft="160dp"
                             android:layout_marginTop="22dp"
                             android:gravity="center"
                             android:text="EL000001"
@@ -151,11 +151,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="130dp"
-                            android:layout_marginTop="22dp"
+                            android:layout_marginTop="25dp"
                             android:gravity="center"
                             android:text=""
                             android:textSize="12dp"
-                            android:textStyle="bold" />
+                            android:textStyle="normal" />
 
 
                     </androidx.cardview.widget.CardView>
@@ -218,7 +218,7 @@
                             android:layout_marginLeft="130dp"
                             android:layout_marginTop="15dp"
                             android:gravity="center"
-                            android:text="2KM"
+                            android:text="Km"
                             android:textSize="15dp"
                             android:textStyle="normal" />
 
@@ -229,7 +229,7 @@
                             android:layout_marginLeft="130dp"
                             android:layout_marginTop="40dp"
                             android:gravity="center"
-                            android:text="2KM"
+                            android:text="m"
                             android:textSize="10dp"
                             android:textStyle="normal" />
 

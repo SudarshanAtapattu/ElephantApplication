@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,8 +42,9 @@ public class MyProfileActivity extends AppCompatActivity implements LocationList
     private GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 123;
     private FirebaseAuth mAuth;
-    ImageView logout;
+    ImageView logout,Done;
     TextView name, email;
+    EditText TeleNo;
 
     Layout callToo;
     private DatabaseReference databaseReference;
@@ -65,6 +67,9 @@ public class MyProfileActivity extends AppCompatActivity implements LocationList
         NowIN = findViewById(R.id.NowIn);
         String NowIn = getIntent().getStringExtra("addresses");
         NowIN.setText(NowIn);
+
+        TeleNo =findViewById(R.id.teleNo);
+        Done =findViewById(R.id.done);
 
 
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
@@ -212,6 +217,10 @@ public class MyProfileActivity extends AppCompatActivity implements LocationList
     @Override
     public void onProviderDisabled(@NonNull String provider) {
 
+    }
+
+    private  void insertData(){
+        String teleNo = TeleNo.getText().toString();
     }
 
 
