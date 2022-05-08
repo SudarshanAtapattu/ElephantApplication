@@ -5,10 +5,10 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -17,7 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ElephantApplication">
-
+        <receiver
+            android:name=".GeoFenceBroadCastReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -47,10 +50,10 @@
             android:name=".StatAndBehavioursActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MapsActivity"
             android:exported="false" />
         <activity
-            android:name=".MapsActivity"
+            android:name=".Menue"
             android:exported="false" />
         <activity
             android:name=".MyLocationActivity"
@@ -62,7 +65,7 @@
             android:name=".Login"
             android:exported="true" />
         <activity
-            android:name=".Menue"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -49,10 +49,12 @@ public class StatAndBehavioursActivity extends AppCompatActivity {
         databaseReference = firebaseDatabase.getReference("Behavior_&_Status");
         lineDataSet.setLineWidth(5);
         fetchData();
+        lineChart.getXAxis().setAxisMaximum(12);
 
-        XAxis xAxis = lineChart.getXAxis();
-        YAxis yAxis  = lineChart.getAxisLeft();
-        YAxis YAxixRight = lineChart.getAxisRight();
+
+       // XAxis xAxis = lineChart.getXAxis();
+      //  YAxis yAxis  = lineChart.getAxisLeft();
+        //YAxis YAxixRight = lineChart.getAxisRight();
 
        // xAxis.setValueFormatter( new MyAxixVlaueFormatter());
 
@@ -95,7 +97,7 @@ public class StatAndBehavioursActivity extends AppCompatActivity {
         lineChart.setContentDescription("Invading Elephant");
         lineChart.setNoDataTextColor(Color.RED);
 
-       lineChart.getDescription().setEnabled(false);
+       lineChart.getDescription().setText("Month");
 
     }
 //    private  class MyAxixVlaueFormatter extends ValueFormatter implements IAxisValueFormatter{

@@ -60,6 +60,7 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
     implementation "com.google.android.gms:play-services-location:15.0.1"
+    implementation "com.google.android.gms:play-services-location:17.0.0"
     implementation("androidx.multidex:multidex:2.0.1")
 
     implementation 'com.google.maps.android:android-maps-utils:0.4+'
@@ -67,6 +68,12 @@ dependencies {
 //    implementation 'io.github.farshidroohi:lineGraph:1.0.2'
 
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.firebase:geofire-android:3.0.0'
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'com.github.Velli20:MaterialUnixGraphLibrary:v1.5'
+
+
 
 
 

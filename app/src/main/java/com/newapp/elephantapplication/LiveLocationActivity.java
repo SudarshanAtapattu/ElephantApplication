@@ -22,6 +22,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -43,6 +44,7 @@ public class LiveLocationActivity extends AppCompatActivity implements OnMapRead
     private ActivityMapsBinding binding;
 
     private  static  final  int LOCATION_REQUEST = 500;
+    Marker marker;
 
 
     @Override
@@ -57,6 +59,7 @@ public class LiveLocationActivity extends AppCompatActivity implements OnMapRead
 
         MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map_frag);
         mapFragment.getMapAsync(this);
+
 
 
         list = new ArrayList<>();
@@ -106,9 +109,13 @@ public class LiveLocationActivity extends AppCompatActivity implements OnMapRead
                 LatLng location = new LatLng(f_latitude, f_longitude);
 
 
-                mMap.addMarker(new MarkerOptions().position(location).title("ELE00001").icon(bitmapDescriptorFactory(getApplicationContext(),R.drawable.ele_marker)));
+                if(marker != null){
+                    marker.remove();
+                }
+                mMap.clear();
+                marker=mMap.addMarker(new MarkerOptions().position(location).title("ELE00001").icon(bitmapDescriptorFactory(getApplicationContext(),R.drawable.ele_marker)));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
-
+                mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
             }
 
@@ -126,6 +133,7 @@ public class LiveLocationActivity extends AppCompatActivity implements OnMapRead
         }
 
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

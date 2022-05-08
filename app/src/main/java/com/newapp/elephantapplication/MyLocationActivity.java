@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.icu.text.DecimalFormat;
 import android.location.Address;
@@ -21,6 +22,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -35,7 +37,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -62,15 +66,19 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
     Data_Adapter data_adapter;
     ArrayList<Data_Model> list;
     private GoogleMap mMap;
-    Double distance;
+    double distance;
     Double distanceKm;
     TextView Location, Distance_tv, distanceM;
     private  static  final  int LOCATION_REQUEST = 500;
+    private List<LatLng> villageArea;
+    Marker currentManrker;
 
     String address;
 
 
     LatLng EleLocation, latLng;
+
+    double f_latitude,f_longitude;
 
 
     @Override
@@ -106,7 +114,27 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
             }
         });
 
+
     }
+
+    private void initArea() {
+        villageArea = new ArrayList<>();
+        villageArea.add(new LatLng(7.426537905820147, 80.28138200001929));
+        villageArea.add(new LatLng(7.440190092541254, 80.26815938916904));// 7.440190092541254, 80.26815938916904
+        villageArea.add(new LatLng(7.437388714623366, 80.27801759096522)); //7.437388714623366, 80.27801759096522
+
+        for (LatLng latLng : villageArea) {
+            mMap.addCircle(new CircleOptions().center(latLng)
+                    .radius(500) //500m
+                    .strokeColor(Color.RED)
+                    .fillColor(0x220000FF)
+                    .strokeWidth(5.0f)
+            );
+
+        }
+
+    }
+
 
     private void runtimePermission() {
 
@@ -181,12 +209,24 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                    Double f_latitude = snapshot.child("f_latitude").getValue(Double.class);
-                    Double f_longitude = snapshot.child("f_longitude").getValue(Double.class);
+                     f_latitude = snapshot.child("f_latitude").getValue(Double.class);
+                     f_longitude = snapshot.child("f_longitude").getValue(Double.class);
+
+                if(currentManrker != null){
+                    currentManrker.remove();
+                }
+                mMap.clear();
 
                     EleLocation = new LatLng(f_latitude, f_longitude);
-                    mMap.addMarker(new MarkerOptions().position(EleLocation).title("ELE00001").icon(bitmapDescriptorFactory(getApplicationContext(),R.drawable.ele_marker)));
+                    currentManrker=  mMap.addMarker(new MarkerOptions().position(EleLocation).title("ELE00001").icon(bitmapDescriptorFactory(getApplicationContext(),R.drawable.ele_marker)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(EleLocation));
+                    mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                    initArea();
+
+                    //startActivity(getIntent());
+
+
+
                 }
 
                 @Override
@@ -241,6 +281,8 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
     public void onLocationChanged(@NonNull Location location) {
         Toast.makeText(this, "" + location.getLongitude() + "," + location.getLatitude(), Toast.LENGTH_SHORT).show();
         try {
+
+
             Geocoder geocoder = new Geocoder(MyLocationActivity.this, Locale.getDefault());
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
             String address = addresses.get(0).getAddressLine(0);
@@ -257,15 +299,23 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
             LatLng myLocation = new LatLng(Lat, Long);
 
             //m
+            //double ac = Math.abs(f_latitude - Lat);//
+            //double cb = Math.abs(f_longitude - Long);
+            // distance = Math.hypot(ac, cb);
             distance = SphericalUtil.computeDistanceBetween(EleLocation, myLocation);
-            //m
+
+
             double roundOffM = Math.round(distance*100)/100.00;
+
+            Log.e("distance", "distance = " + distance);
+
             distanceM = findViewById(R.id.distanceM_tv);
             distanceM.setText(roundOffM+ "m");
 
 
+
             //Km
-            distanceKm = distance / 1000;
+            distanceKm = distance / 100;
             //Toast.makeText(this, distanceKm + "km", Toast.LENGTH_SHORT).show();
             Toast.makeText(this,  "Calculating Distance.........", Toast.LENGTH_SHORT).show();
             Log.e("distance", "distance in km  = " + distanceKm);
